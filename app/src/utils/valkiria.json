@@ -1,0 +1,91 @@
+{
+  "address": "EhAXbmFhRWr3YKAGWw2Q62fLZsSsVWUpRCCF6F4fhetm",
+  "metadata": {
+    "name": "valkiria",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "registrar_evento",
+      "discriminator": [
+        111,
+        25,
+        116,
+        244,
+        86,
+        170,
+        60,
+        164
+      ],
+      "accounts": [
+        {
+          "name": "cuenta_valkiria",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "usuario",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "contenido",
+          "type": "string"
+        },
+        {
+          "name": "cat",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "MensajeValkiria",
+      "discriminator": [
+        65,
+        184,
+        242,
+        134,
+        41,
+        36,
+        194,
+        137
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "MensajeValkiria",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "autor",
+            "type": "pubkey"
+          },
+          {
+            "name": "texto",
+            "type": "string"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "categoria",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
